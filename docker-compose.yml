@@ -4,11 +4,11 @@ services:
 
     react:
         ports:
-            -3000:3000
+            - 3000:3000
         build:
             context: ./frontend
             dockerfile: Dockerfile
-        volume:
+        volumes:
             - ./frontend:/app
             - /app/node_modules
         networks:
