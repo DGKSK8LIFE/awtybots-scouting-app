@@ -11,5 +11,6 @@ CREATE TABLE recording (
     lower_port SMALLINT NOT NULL,
     control_panel_stage_two BOOLEAN,
     control_panel_stage_three BOOLEAN,
-    hang_time TINYINT NOT NULL
+    hang_time TINYINT NOT NULL,
+    time TIMESTAMP
 );
