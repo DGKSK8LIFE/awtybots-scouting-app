@@ -3,7 +3,7 @@ USE Scout_DB;
 
 CREATE TABLE recording (
     id int PRIMARY KEY AUTO_INCREMENT,
-    team VARCHAR(36) PRIMARY KEY,
+    team VARCHAR(36),
     starting_location UNSIGNED TINYINT NOT NULL,
     moved BOOLEAN NOT NULL,
     inner_port SMALLINT NOT NULL,
