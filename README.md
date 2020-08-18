@@ -19,6 +19,8 @@ Scouting PWA for team 5829
 - Apollo-Server
 - ExpressJS
 - (potential) TypeORM
+- MySQL
+- GraphQL
 
 ### DevOps
 
