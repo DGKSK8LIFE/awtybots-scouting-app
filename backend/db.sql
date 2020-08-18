@@ -1,0 +1,2 @@
+CREATE DATABASE Scout_DB;
+USE Scout_DB;
