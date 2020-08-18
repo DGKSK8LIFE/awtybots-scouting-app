@@ -2,7 +2,7 @@ CREATE DATABASE Scout_DB;
 USE Scout_DB;
 
 CREATE TABLE recording (
-    id int PRIMARY KEY AUTO_INCREMENT,
+    id int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     team VARCHAR(36),
     starting_location UNSIGNED TINYINT NOT NULL,
     moved BOOLEAN NOT NULL,
