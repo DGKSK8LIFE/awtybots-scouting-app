@@ -15,3 +15,4 @@ db.connect(function (err: Error) {
   }
   console.log('db has successfully connected');
 });
+
