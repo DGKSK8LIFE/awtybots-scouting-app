@@ -1,21 +1,21 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
+// import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from 'typeorm';
 
-@Entity()
-export class recording {
+// @Entity()
+// export class recording {
 
-  @PrimaryGeneratedColumn()
-  id: number;
+//   @PrimaryGeneratedColumn()
+//   id: number;
   
-  @Column
-  team: number;
+//   @Column
+//   team: number;
 
-  @Column
-  starting_location: number;
+//   @Column
+//   starting_location: number;
 
-  @Column
-  moved: boolean;
+//   @Column
+//   moved: boolean;
 
-  @Column
-  inner_port: 
+//   @Column
+//   inner_port: 
     
-}
+// }
