@@ -14,10 +14,10 @@ services:
         networks:
             - fullstack
         depends_on: 
-            - node
+            - go 
         tty: true
 
-    node:
+    go:
         ports:
             - 8080:8080
         build:
