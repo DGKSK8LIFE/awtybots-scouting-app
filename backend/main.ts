@@ -9,9 +9,9 @@ const db = mysql.createConnection({
   database: 'Scout_DB'
 });
 
-db.connect((err) => {
+db.connect(function (err: Error) {
   if (err) {
     throw err;
   }
   console.log('db has successfully connected');
-})
+});
