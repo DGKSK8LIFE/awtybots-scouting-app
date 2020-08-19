@@ -4,7 +4,7 @@ Scouting PWA for team 5829
 
 ## Run instructions
 
-Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud*
+Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud lmao*
 
 ## Tech Stack
 
