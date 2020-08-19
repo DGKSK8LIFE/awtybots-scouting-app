@@ -19,12 +19,11 @@ Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud*
 
 ### Backend
 
-- Typescript
-- ExpressJS
 - MySQL
 - REST api
 - JWT auth (potential)
 - Go
+- Go Gin
 
 ### DevOps
 
