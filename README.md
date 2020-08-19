@@ -13,18 +13,15 @@ Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud*
 - React
 - (potential) Redux
 - React-Boostrap
-- Apollo-client
 - Javascript
 - (potential) Scss
 
 ### Backend
 
 - Typescript
-- Apollo-Server
 - ExpressJS
-- (potential) TypeORM
 - MySQL
-- GraphQL
+- REST api
 - JWT auth (potential)
 
 ### DevOps
