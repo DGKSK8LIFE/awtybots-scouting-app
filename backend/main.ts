@@ -14,8 +14,8 @@ db.connect(function (err: Error) {
   console.log('db has successfully connected');
 });
 
-app.get('/api/records', function (req, res) {
-  db.query('SELECT * FROM records', (err, records) => {
+app.get('/api/recordings', function (req, res) {
+  db.query('SELECT * FROM recording', (err, records) => {
     if (err) throw err;
     res.send(records);
   })
