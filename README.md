@@ -24,6 +24,7 @@ Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud*
 - MySQL
 - REST api
 - JWT auth (potential)
+- Go
 
 ### DevOps
 
