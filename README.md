@@ -25,6 +25,7 @@ Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud*
 - (potential) TypeORM
 - MySQL
 - GraphQL
+- JWT auth (potential)
 
 ### DevOps
 
