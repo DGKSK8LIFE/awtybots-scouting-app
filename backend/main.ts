@@ -10,9 +10,15 @@ const db = mysql.createConnection({
 });
 
 db.connect(function (err: Error) {
-  if (err) {
-    throw err;
-  }
+  if (err) throw err; 
   console.log('db has successfully connected');
 });
 
+app.get('/api/records', function (req, res) {
+  db.query('SELECT * FROM records', (err, records) => {
+    if (err) throw err;
+    res.send(records);
+  })
+});
+
+app.listen('8080');
