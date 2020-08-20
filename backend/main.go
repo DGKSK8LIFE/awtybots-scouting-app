@@ -13,6 +13,6 @@ func init() {
 
 func main() {
 	r := gin.Default()
-	r.GET("/api/recordings", handler.Recordings)
+	r.GET("/api/read-recordings", handler.ReadRecordings)
 	r.Run()
 }
