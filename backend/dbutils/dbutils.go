@@ -57,4 +57,5 @@ func CreateRecordings(recording Recording) error {
 		return fmt.Errorf("query exec error: %s", err)
 	}
 
+	return nil
 }
