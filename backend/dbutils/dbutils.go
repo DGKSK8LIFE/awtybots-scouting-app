@@ -42,8 +42,8 @@ func SelectRecordings(recording []Recording) {
 	DB.Select(&recording, "SELECT * FROM Recording")
 }
 
-// CreateRecordings creates a recording row (takes a Recording struct as input)
-func CreateRecordings(recording Recording) error {
+// CreateRecording creates a recording row (takes a Recording struct as input)
+func CreateRecording(recording Recording) error {
 	query, err := DB.Prepare("INSERT INTO Recording (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
 	defer query.Close()
 
