@@ -16,17 +16,17 @@ var (
 
 // Recording is the abstraction struct for Recording table
 type Recording struct {
-	ID                     uint `db:"id" json:"id"`
-	Team                   uint `db:"team" json:"team"`
-	StartingLocation       uint `db:"starting_location" json:"starting_location"`
-	Moved                  bool `db:"moved" json:"moved"`
-	InnerPort              uint `db:"inner_port" json:"inner_port"`
-	OuterPort              uint `db:"outer_port" json:"out_port"`
-	LowerPort              uint `db:"lower_port" json:"lower_port"`
-	ControlPanelStageTwo   bool `db:"control_panel_stage_two" json:"control_panel_stage_two"`
-	ControlPanelStageThree bool `db:"control_panel_stage_three" json:"contrl_panel_stage_three"`
-	HangTime               uint `db:"hang_time" json:"hang_time"`
-	Time                   uint `db:"time" json:"time"`
+	ID                     uint8  `db:"id" json:"id"`
+	Team                   uint16 `db:"team" json:"team"`
+	StartingLocation       uint8  `db:"starting_location" json:"starting_location"`
+	Moved                  bool   `db:"moved" json:"moved"`
+	InnerPort              uint16 `db:"inner_port" json:"inner_port"`
+	OuterPort              uint16 `db:"outer_port" json:"out_port"`
+	LowerPort              uint16 `db:"lower_port" json:"lower_port"`
+	ControlPanelStageTwo   bool   `db:"control_panel_stage_two" json:"control_panel_stage_two"`
+	ControlPanelStageThree bool   `db:"control_panel_stage_three" json:"contrl_panel_stage_three"`
+	HangTime               uint8  `db:"hang_time" json:"hang_time"`
+	Time                   uint16 `db:"time" json:"time"`
 }
 
 // Open opens the DB
