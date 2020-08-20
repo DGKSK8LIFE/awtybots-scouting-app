@@ -1,6 +1,9 @@
 package dbutils
 
 import (
+	"fmt"
+	"log"
+
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 )
@@ -37,4 +40,21 @@ func Open() {
 // SelectRecordings selects all recordings and scans them to an array of Recordings
 func SelectRecordings(recording []Recording) {
 	DB.Select(&recording, "SELECT * FROM Recording")
+}
+
+// CreateRecordings creates a recording row (takes a Recording struct as input)
+func CreateRecordings(recording Recording) error {
+	query, err := DB.Prepare("INSERT INTO Recording (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+	defer query.Close()
+
+	if err != nil {
+		log.Fatalf("Prepare err %s\n", err)
+		return err
+	}
+
+	_, err = query.Exec(recording.ID, recording.Team, recording.StartingLocation, recording.Team, recording.StartingLocation, recording.Moved, recording.InnerPort, recording.OuterPort, recording.LowerPort, recording.ControlPanelStageTwo, recording.ControlPanelStageThree, recording.HangTime, recording.Time)
+	if err != nil {
+		return fmt.Errorf("query exec error: %s", err)
+	}
+
 }
