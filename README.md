@@ -12,7 +12,7 @@ Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud lmao
 
 - React
 - (potential) Redux
-- React-Boostrap
+- React-Bootstrap
 - Javascript
 - (potential) Scss
 - Axios
