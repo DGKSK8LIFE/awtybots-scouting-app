@@ -1,9 +1,10 @@
 import React from 'react';
+import NavBar from './components/navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>WASSUUUUUUUUUUUP BITCONNEEEEEEEEECT?!</h1> 
+      <NavBar></NavBar>
     </div>
   );
 }
