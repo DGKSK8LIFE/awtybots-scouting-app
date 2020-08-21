@@ -1,6 +1,6 @@
 # Scouting-App
 
-Scouting PWA for team 5829
+Scouting PWA for First's **FINEST**, 5829.
 
 ## Run instructions
 
