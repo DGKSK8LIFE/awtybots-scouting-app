@@ -1,9 +1,12 @@
 import React from 'react';
-import { Navbar, Nav, Form, FormControl, Button  } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     return (
       <div className="navbar">
+        <Link to="">View Graphs</Link>
+        <Link to="">Create Recordings</Link>
+        <Link to="">View Recordings</Link>
       </div>
     );
 }
