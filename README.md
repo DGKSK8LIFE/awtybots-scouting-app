@@ -11,10 +11,10 @@ Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud lmao
 ### Frontend
 
 - React
+- React-Router
 - (potential) Redux
-- React-Bootstrap
 - Javascript
-- (potential) Scss
+- Scss
 - Axios
 
 ### Backend
