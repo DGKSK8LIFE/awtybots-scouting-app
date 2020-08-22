@@ -3,4 +3,14 @@ $background-color: #48CC5D;
 .navbar {
     background-color: $background-color;
     font-size: 50px;
+    &.graph-hl {
+
+    }
+    &.create-hl {
+
+    }
+    &.view-hl {
+
+    }
+
 }
