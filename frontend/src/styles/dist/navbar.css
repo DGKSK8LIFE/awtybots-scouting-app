@@ -1,4 +1,8 @@
 .navbar {
   background-color: #48CC5D;
   font-size: 50px;
+  color: #f6f6f6;
+}
+.navbar.hover {
+  color: #685f5f;
 }
