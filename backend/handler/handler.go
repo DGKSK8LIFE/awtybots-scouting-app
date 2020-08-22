@@ -26,7 +26,7 @@ func CreateRecording(c *gin.Context) {
 		c.Error(err)
 	}
 
-	_, err = dbutils.CreateRecording(recording)
+	err = dbutils.CreateRecording(recording)
 
 	if err != nil {
 		c.Error(err)
