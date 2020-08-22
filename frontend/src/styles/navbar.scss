@@ -5,6 +5,7 @@ $text-color-after: #685f5f;
 .navbar {
     background-color: $background-color;
     font-size: 50px;
+    text-align: center;
 
     &.hyperlinks {
         color: $text-color-before;
