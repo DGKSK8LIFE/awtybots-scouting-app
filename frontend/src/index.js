@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './pages/Home';
 import * as serviceWorker from './serviceWorker';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <BrowserRouter>
+    <Route exact path='/'>
+      <Home />
+    </Route>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
