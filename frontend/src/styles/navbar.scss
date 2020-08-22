@@ -5,20 +5,12 @@ $text-color-after: #685f5f;
 .navbar {
     background-color: $background-color;
     font-size: 50px;
-    color: $text-color-before;
 
-    &.hover {
-        color: $text-color-after;
-    }
-
-    &.graph-hl {
-
-    }
-    &.create-hl {
-
-    }
-    &.view-hl {
-
+    &.hyperlinks {
+        color: $text-color-before;
+        &:hover {
+            color: $text-color-after;
+        }
     }
 
 }
