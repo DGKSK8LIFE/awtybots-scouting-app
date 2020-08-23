@@ -44,7 +44,7 @@ func SelectRecordings(recording []Recording) {
 
 // CreateRecording creates a recording row (takes a Recording struct as input)
 func CreateRecording(recording Recording) error {
-	query, err := DB.Prepare("INSERT INTO Recording (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+	query, err := DB.Prepare("INSERT INTO Recording VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
 	defer query.Close()
 
 	if err != nil {
