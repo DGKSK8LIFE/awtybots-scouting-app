@@ -15,7 +15,7 @@ Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud lmao
 - (potential) Redux
 - Javascript
 - Axios
-- TailwindCSS 
+- React-Bootstrap
 
 ### Backend
 
