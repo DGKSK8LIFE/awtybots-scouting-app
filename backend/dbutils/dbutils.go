@@ -70,7 +70,7 @@ func GenerateTables() {
 		{Team: 420, StartingLocation: 0, Moved: true, InnerPort: 30, OuterPort: 20, LowerPort: 13, ControlPanelStageTwo: true, ControlPanelStageThree: true, HangTime: 21, Time: 60},
 	}
 	for _, i := range data {
-		err := CreateRecording(&i)
+		err := CreateRecording(i)
 		if err != nil {
 			panic(err)
 			break
