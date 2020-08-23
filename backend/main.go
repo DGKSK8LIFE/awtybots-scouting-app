@@ -9,6 +9,7 @@ import (
 
 func init() {
 	dbutils.Open()
+	dbutils.GenerateTables()
 }
 
 func main() {
