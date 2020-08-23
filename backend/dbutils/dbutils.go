@@ -59,3 +59,21 @@ func CreateRecording(recording Recording) error {
 
 	return nil
 }
+
+// GenerateTables inserts rows into the Recording table so that we can have data to display/test
+func GenerateTables() {
+	data := []Recording{
+		{Team: 5829, StartingLocation: 0, Moved: true, InnerPort: 50, OuterPort: 15, LowerPort: 20, ControlPanelStageTwo: true, ControlPanelStageThree: false, HangTime: 20, Time: 300},
+		{Team: 118, StartingLocation: 2, Moved: false, InnerPort: 35, OuterPort: 16, LowerPort: 26, ControlPanelStageTwo: false, ControlPanelStageThree: false, HangTime: 0, Time: 100},
+		{Team: 360, StartingLocation: 1, Moved: true, InnerPort: 5, OuterPort: 10, LowerPort: 5, ControlPanelStageTwo: false, ControlPanelStageThree: true, HangTime: 15, Time: 50},
+		{Team: 69, StartingLocation: 0, Moved: true, InnerPort: 30, OuterPort: 20, LowerPort: 13, ControlPanelStageTwo: true, ControlPanelStageThree: true, HangTime: 21, Time: 60},
+		{Team: 420, StartingLocation: 0, Moved: true, InnerPort: 30, OuterPort: 20, LowerPort: 13, ControlPanelStageTwo: true, ControlPanelStageThree: true, HangTime: 21, Time: 60},
+	}
+	for _, i := range data {
+		err := CreateRecording(&i)
+		if err != nil {
+			panic(err)
+			break
+		}
+	}
+}
