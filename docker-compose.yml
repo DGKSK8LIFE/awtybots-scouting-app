@@ -2,20 +2,20 @@ version: '3'
 
 services:
 
-    react:
-        ports:
-            - 3000:3000
-        build:
-            context: ./frontend
-            dockerfile: Dockerfile
-        volumes:
-            - ./frontend:/app
-            - /app/node_modules
-        networks:
-            - fullstack
-        depends_on: 
-            - go 
-        tty: true
+    # react:
+    #     ports:
+    #         - 3000:3000
+    #     build:
+    #         context: ./frontend
+    #         dockerfile: Dockerfile
+    #     volumes:
+    #         - ./frontend:/app
+    #         - /app/node_modules
+    #     networks:
+    #         - fullstack
+    #     depends_on: 
+    #         - go 
+    #     tty: true
 
     go:
         ports:
@@ -40,7 +40,7 @@ services:
             - 6000:6000
         volumes: 
             - database_mysql:/var/lib/mysql
-            - ./backend:/app/db.sql
+            - ./backend:/app/db-init.sql
         networks:
             - fullstack
 
