@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
-function Card(props) {
+export default function Card(props) {
     return (
         <Card>
             <Card.Header as="h5">{props.team}</Card.Header>
