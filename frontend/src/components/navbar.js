@@ -1,10 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import '../assets/dist/navbar.css';
 
 export default function NavBar() {
     return (
-      <div className="scoutingnavbar">
       <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="/">View Recordings</Navbar.Brand>
     <Nav className="mr-auto">
@@ -16,6 +14,5 @@ export default function NavBar() {
       <Button variant="outline-info">Search</Button>
     </Form>
   </Navbar>
-  </div>
     );
 }
