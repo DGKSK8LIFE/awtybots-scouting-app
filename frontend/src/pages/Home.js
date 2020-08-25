@@ -4,7 +4,10 @@ import Card from 'components/card';
 
 function Home() {
   return (
-    <NavBar />
+    <React.Fragment> 
+      <NavBar />
+      <Car obj={}/>
+    </React.Fragment>
   );
 }
 
