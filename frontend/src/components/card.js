@@ -32,7 +32,7 @@ export default function Card(props) {
                        Control Panel Stage Three?: {props.controlPanelStageThree}
                    </li>
                    <li>
-                        Hangtime: {props.hangTime}                       
+                       Hangtime: {props.hangTime}                       
                    </li>
                    <li>
                        Time: {props.time}
