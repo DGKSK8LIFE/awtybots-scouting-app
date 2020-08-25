@@ -3,7 +3,6 @@ package dbutils
 import (
 	"fmt"
 	"log"
-	"time"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
@@ -17,17 +16,17 @@ var (
 
 // Recording is the abstraction struct for Recording table
 type Recording struct {
-	ID                     uint8     `db:"id" json:"id"`
-	Team                   uint16    `db:"team" json:"team"`
-	StartingLocation       uint8     `db:"starting_location" json:"starting_location"`
-	Moved                  bool      `db:"moved" json:"moved"`
-	InnerPort              uint16    `db:"inner_port" json:"inner_port"`
-	OuterPort              uint16    `db:"outer_port" json:"out_port"`
-	LowerPort              uint16    `db:"lower_port" json:"lower_port"`
-	ControlPanelStageTwo   bool      `db:"control_panel_stage_two" json:"control_panel_stage_two"`
-	ControlPanelStageThree bool      `db:"control_panel_stage_three" json:"contrl_panel_stage_three"`
-	HangTime               uint8     `db:"hang_time" json:"hang_time"`
-	Time                   time.Time `db:"time" json:"time"`
+	ID                     uint8  `db:"id" json:"id"`
+	Team                   uint16 `db:"team" json:"team"`
+	StartingLocation       uint8  `db:"starting_location" json:"starting_location"`
+	Moved                  bool   `db:"moved" json:"moved"`
+	InnerPort              uint16 `db:"inner_port" json:"inner_port"`
+	OuterPort              uint16 `db:"outer_port" json:"out_port"`
+	LowerPort              uint16 `db:"lower_port" json:"lower_port"`
+	ControlPanelStageTwo   bool   `db:"control_panel_stage_two" json:"control_panel_stage_two"`
+	ControlPanelStageThree bool   `db:"control_panel_stage_three" json:"contrl_panel_stage_three"`
+	HangTime               uint8  `db:"hang_time" json:"hang_time"`
+	Time                   string `db:"time" json:"time"`
 }
 
 // Open opens the DB
@@ -64,11 +63,11 @@ func CreateRecording(recording Recording) error {
 // GenerateTables inserts rows into the Recording table so that we can have data to display/test
 func GenerateTables() {
 	data := []Recording{
-		{Team: 5829, StartingLocation: 0, Moved: true, InnerPort: 50, OuterPort: 15, LowerPort: 20, ControlPanelStageTwo: true, ControlPanelStageThree: false, HangTime: 20, Time: 300},
-		{Team: 118, StartingLocation: 2, Moved: false, InnerPort: 35, OuterPort: 16, LowerPort: 26, ControlPanelStageTwo: false, ControlPanelStageThree: false, HangTime: 0, Time: 100},
-		{Team: 360, StartingLocation: 1, Moved: true, InnerPort: 5, OuterPort: 10, LowerPort: 5, ControlPanelStageTwo: false, ControlPanelStageThree: true, HangTime: 15, Time: 50},
-		{Team: 69, StartingLocation: 0, Moved: true, InnerPort: 30, OuterPort: 20, LowerPort: 13, ControlPanelStageTwo: true, ControlPanelStageThree: true, HangTime: 21, Time: 60},
-		{Team: 420, StartingLocation: 0, Moved: true, InnerPort: 30, OuterPort: 20, LowerPort: 13, ControlPanelStageTwo: true, ControlPanelStageThree: true, HangTime: 21, Time: 60},
+		{Team: 5829, StartingLocation: 0, Moved: true, InnerPort: 50, OuterPort: 15, LowerPort: 20, ControlPanelStageTwo: true, ControlPanelStageThree: false, HangTime: 20, Time: "2020-01-01 10:10:10"},
+		{Team: 118, StartingLocation: 2, Moved: false, InnerPort: 35, OuterPort: 16, LowerPort: 26, ControlPanelStageTwo: false, ControlPanelStageThree: false, HangTime: 0, Time: "2020-01-01 10:10:12"},
+		{Team: 360, StartingLocation: 1, Moved: true, InnerPort: 5, OuterPort: 10, LowerPort: 5, ControlPanelStageTwo: false, ControlPanelStageThree: true, HangTime: 15, Time: "2020-03-01 10:10:10"},
+		{Team: 69, StartingLocation: 0, Moved: true, InnerPort: 30, OuterPort: 20, LowerPort: 13, ControlPanelStageTwo: true, ControlPanelStageThree: true, HangTime: 21, Time: "2020-05-01 10:10:10"},
+		{Team: 420, StartingLocation: 0, Moved: true, InnerPort: 30, OuterPort: 20, LowerPort: 13, ControlPanelStageTwo: true, ControlPanelStageThree: true, HangTime: 21, Time: "2020-01-05 10:10:10"},
 	}
 	for _, i := range data {
 		err := CreateRecording(i)
