@@ -73,7 +73,6 @@ func GenerateTables() {
 		err := CreateRecording(i)
 		if err != nil {
 			panic(err)
-			break
 		}
 	}
 }
