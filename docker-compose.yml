@@ -34,7 +34,7 @@ services:
         image: mysql
         environment: 
             MYSQL_ROOT_PASSWORD: root 
-            MYSQL_DATABASE: Scout_DB
+            MYSQL_DATABASE: ScoutDB
         container_name: db
         ports:
             - 6000:6000
