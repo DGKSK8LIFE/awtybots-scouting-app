@@ -31,7 +31,7 @@ type Recording struct {
 
 // Open opens the DB
 func Open() {
-	DB, err = sqlx.Connect("mysql", "root:root@tcp(db)/ScoutDB")
+	DB, err = sqlx.Connect("mysql", "root:root@tcp(db)/Scout_DB")
 	if err != nil {
 		panic(err)
 	}
