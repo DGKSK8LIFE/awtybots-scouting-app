@@ -1,66 +1,29 @@
 import React from "react";
-import Form from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import NavBar from "../components/navbar";
 
 export default function Create() {
-  <React.Fragment>
-    <NavBar></NavBar>
-    <Form>
-      <Form.Group as={Row} controlId="formHorizontalEmail">
-        <Form.Label column sm={2}>
-          Email
-        </Form.Label>
-        <Col sm={10}>
-          <Form.Control type="email" placeholder="Email" />
-        </Col>
-      </Form.Group>
-
-      <Form.Group as={Row} controlId="formHorizontalPassword">
-        <Form.Label column sm={2}>
-          Password
-        </Form.Label>
-        <Col sm={10}>
-          <Form.Control type="password" placeholder="Password" />
-        </Col>
-      </Form.Group>
-      <fieldset>
-        <Form.Group as={Row}>
-          <Form.Label as="legend" column sm={2}>
-            Radios
-          </Form.Label>
-          <Col sm={10}>
-            <Form.Check
-              type="radio"
-              label="first radio"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios1"
-            />
-            <Form.Check
-              type="radio"
-              label="second radio"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="third radio"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios3"
-            />
-          </Col>
+  return (
+    <React.Fragment>
+      <NavBar></NavBar>
+      <br></br>
+      <Form>
+        <Form.Group controlId="formGroupTeam">
+          <Form.Control type="number" placeholder="Enter team" />
         </Form.Group>
-      </fieldset>
-      <Form.Group as={Row} controlId="formHorizontalCheck">
-        <Col sm={{ span: 10, offset: 2 }}>
-          <Form.Check label="Remember me" />
-        </Col>
-      </Form.Group>
-
-      <Form.Group as={Row}>
-        <Col sm={{ span: 10, offset: 2 }}>
-          <Button type="submit">Sign in</Button>
-        </Col>
-      </Form.Group>
-    </Form>
-  </React.Fragment>;
+        <Form.Group controlId="formGroupInnerPort">
+          <Form.Control type="number" placeholder="Enter inner port score" />
+        </Form.Group>
+        <Form.Group controlId="formGroupOuterPort">
+          <Form.Control type="number" placeholder="Enter outer port score" />
+        </Form.Group>
+        <Form.Group controlId="formGroupLowerPort">
+          <Form.Control type="number" placeholder="Enter lower port score" />
+        </Form.Group>
+        <Form.Group controlId="formGroupHangtime">
+          <Form.Control type="number" placeholder="Enter hangtime" />
+        </Form.Group>
+      </Form>
+    </React.Fragment>
+  );
 }
