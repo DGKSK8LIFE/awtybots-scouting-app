@@ -1,12 +1,12 @@
 import React from 'react';
 import NavBar from '../components/navbar';
-import Card from 'components/card';
+// import Card from '../components/card';
 
 function Home() {
   return (
     <React.Fragment> 
       <NavBar />
-      <Car obj={}/>
+      {/* <Card obj={}/> */}
     </React.Fragment>
   );
 }
