@@ -1,5 +1,3 @@
-import React from 'react';
+import React from "react";
 
-export default function Graphs() {
-
-}
+export default function Graphs() {}
