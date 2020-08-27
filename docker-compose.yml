@@ -1,53 +1,51 @@
-version: '3'
+version: "3"
 
 services:
+  react:
+    ports:
+      - 3000:3000
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - fullstack
+    depends_on:
+      - go
+    tty: true
 
-    react:
-        ports:
-            - 3000:3000
-        build:
-            context: ./frontend
-            dockerfile: Dockerfile
-        volumes:
-            - ./frontend:/app
-            - /app/node_modules
-        networks:
-            - fullstack
-        depends_on: 
-            - go 
-        tty: true
+  go:
+    ports:
+      - 8080:8080
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app
+    networks:
+      - fullstack
+    depends_on:
+      - mysql-container
 
-    go:
-        ports:
-            - 8080:8080
-        build:
-            context: ./backend
-            dockerfile: Dockerfile
-        volumes:
-            - ./backend:/app
-        networks: 
-            - fullstack
-        depends_on: 
-            - mysql-container
-        
-    mysql-container:
-        image: mysql
-        environment: 
-            MYSQL_ROOT_PASSWORD: root 
-            MYSQL_DATABASE: Scout_DB
-        container_name: db
-        ports:
-            - 6000:6000
-        volumes: 
-            - database_mysql:/var/lib/mysql
-            - ./backend:/app/db-init.sql
-        networks:
-            - fullstack
-
+  mysql-container:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Scout_DB
+    container_name: db
+    ports:
+      - 6000:6000
+    volumes:
+      - database_mysql:/var/lib/mysql
+      - ./backend:/app/db-init.sql
+    networks:
+      - fullstack
 
 volumes:
-    database_mysql:
+  database_mysql:
 
 networks:
-    fullstack:
-        driver: bridge
+  fullstack:
+    driver: bridge

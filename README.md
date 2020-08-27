@@ -4,7 +4,7 @@ Scouting PWA for First's **FINEST**, 5829.
 
 ## Run instructions
 
-1. Run `./run.sh` *atm only works on linux machines/WSL; windows plebs git gud lmao*
+1. Run `./run.sh` _atm only works on linux machines/WSL; windows plebs git gud lmao_
 2. Navigate to `localhost:3000` in your browser.
 
 ## Tech Stack
