@@ -1,11 +1,13 @@
 import React from "react";
-import { Form, Col, Row } from "react-bootstrap";
+import { Form, Col, Row, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
 
 export default function Create() {
   return (
     <React.Fragment>
       <NavBar></NavBar>
+      <br></br>
+      <h1>Create a Recording</h1>
       <br></br>
       <Form>
         <Form.Group controlId="formGroupTeam">
@@ -59,6 +61,11 @@ export default function Create() {
         </Form.Group>
         <Form.Group controlId="formGroupHangtime">
           <Form.Control type="number" placeholder="Enter hangtime" />
+        </Form.Group>
+        <Form.Group as={Row}>
+          <Col sm={{ span: 10, offset: 2 }}>
+            <Button type="submit">Create Recording</Button>
+          </Col>
         </Form.Group>
       </Form>
     </React.Fragment>
