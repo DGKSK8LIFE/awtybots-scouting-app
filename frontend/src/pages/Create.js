@@ -11,34 +11,23 @@ export default function Create() {
         <Form.Group controlId="formGroupTeam">
           <Form.Control type="number" placeholder="Enter team" />
         </Form.Group>
-        <Form.Group controlId="formGroupStartingLocation" as={Row}>
+        <Form.Group controlId="formGroupStartingLocation">
           <Form.Label as="legend" column sm={2}>
             Starting Location
           </Form.Label>
           <Col sm={10}>
-            <Form.Check 
-              label="left"
-            />
-            <Form.Check 
-              label="center"
-            />
-            <Form.Check 
-              label="right"
-            />
+            <Form.Check label="left" />
+            <Form.Check label="center" />
+            <Form.Check label="right" />
           </Col>
         </Form.Group>
-        <Form.Group>
+        <Form.Group controlId="formGroupMoved?">
           <Form.Label as="legend" column sm={2}>
             Moved?
           </Form.Label>
           <Col sm={10}>
-            <Form.Check 
-            label="yes"
-            />
-            <Form.Check 
-              label="no"           
-            />
-
+            <Form.Check label="yes" />
+            <Form.Check label="no" />
           </Col>
         </Form.Group>
         <Form.Group controlId="formGroupInnerPort">
@@ -49,6 +38,24 @@ export default function Create() {
         </Form.Group>
         <Form.Group controlId="formGroupLowerPort">
           <Form.Control type="number" placeholder="Enter lower port score" />
+        </Form.Group>
+        <Form.Group controlId="formGroupControlPanelStageTwo">
+          <Form.Label as="legend" column sm={2}>
+            Control Panel Stage Two?
+          </Form.Label>
+          <Col sm={10}>
+            <Form.Check label="yes" />
+            <Form.Check label="no" />
+          </Col>
+        </Form.Group>
+        <Form.Group controlId="formGroupControlPanelStageThree">
+          <Form.Label as="legend" column sm={2}>
+            Control Panel Stage Three
+          </Form.Label>
+          <Col sm={10}>
+            <Form.Check label="yes" />
+            <Form.Check label="no" />
+          </Col>
         </Form.Group>
         <Form.Group controlId="formGroupHangtime">
           <Form.Control type="number" placeholder="Enter hangtime" />
