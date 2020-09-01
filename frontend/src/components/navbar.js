@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
 
+// Navbar is the navbar component for the app
 export default function NavBar() {
   return (
     <Navbar bg="dark" variant="dark">
