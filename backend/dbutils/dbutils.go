@@ -44,7 +44,7 @@ func SelectRecordings(recording []Recording) {
 
 // CreateRecording creates a recording row (takes a Recording struct as input)
 func CreateRecording(recording Recording) error {
-	query, err := DB.Prepare("INSERT INTO Recording VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+	query, err := DB.Prepare("INSERT INTO Recording (team, starting_location, moved, inner_port, outer_port, lower_port, control_panel_stage_two, control_panel_stage_three, hang_time, time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
 	defer query.Close()
 
 	if err != nil {
@@ -52,7 +52,7 @@ func CreateRecording(recording Recording) error {
 		return err
 	}
 
-	_, err = query.Exec(recording.Team, recording.StartingLocation, recording.Team, recording.StartingLocation, recording.Moved, recording.InnerPort, recording.OuterPort, recording.LowerPort, recording.ControlPanelStageTwo, recording.ControlPanelStageThree, recording.HangTime, recording.Time)
+	_, err = query.Exec(recording.Team, recording.StartingLocation, recording.Moved, recording.InnerPort, recording.OuterPort, recording.LowerPort, recording.ControlPanelStageTwo, recording.ControlPanelStageThree, recording.HangTime, recording.Time)
 	if err != nil {
 		return fmt.Errorf("query exec error: %s", err)
 	}

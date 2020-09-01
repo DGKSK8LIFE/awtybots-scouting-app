@@ -1,20 +1,20 @@
 version: "3"
 
 services:
-  react:
-    ports:
-      - 3000:3000
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
-    networks:
-      - fullstack
-    depends_on:
-      - go
-    tty: true
+  # react:
+  #   ports:
+  #     - 3000:3000
+  #   build:
+  #     context: ./frontend
+    #   dockerfile: Dockerfile
+    # volumes:
+    #   - ./frontend:/app
+    #   - /app/node_modules
+    # networks:
+    #   - fullstack
+    # depends_on:
+    #   - go
+    # tty: true
 
   go:
     ports:
@@ -31,15 +31,16 @@ services:
 
   mysql-container:
     image: mysql
+    command: --init-file /app/db-init.sql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: Scout_DB
+      MYSQL_DATABASE: Scout-DB
     container_name: db
     ports:
       - 6000:6000
     volumes:
       - database_mysql:/var/lib/mysql
-      - ./backend:/app/db-init.sql
+      - ./backend/db-init.sql:/app/db-init.sql
     networks:
       - fullstack
 
