@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
+// Card returns a card view of team data
 export default function Card(props) {
   return (
     <Card>

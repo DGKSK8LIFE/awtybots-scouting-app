@@ -1,20 +1,21 @@
 version: "3"
 
 services:
-  # react:
-  #   ports:
-  #     - 3000:3000
-  #   build:
-  #     context: ./frontend
-    #   dockerfile: Dockerfile
-    # volumes:
-    #   - ./frontend:/app
-    #   - /app/node_modules
-    # networks:
-    #   - fullstack
-    # depends_on:
-    #   - go
-    # tty: true
+
+  react:
+    ports:
+      - 3000:3000
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - fullstack
+    depends_on:
+      - go
+    tty: true
 
   go:
     ports:
