@@ -1,6 +1,11 @@
 import React from "react";
 import { Form, Col, Row, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
+import axios from 'axios';
+
+const submitForm = () => {
+
+}
 
 export default function Create() {
   return (
@@ -11,7 +16,7 @@ export default function Create() {
       <br></br>
       <Form>
         <Form.Group controlId="formGroupTeam">
-          <Form.Control type="number" placeholder="Enter team" />
+          <Form.Control type="number" placeholder="Enter team" required/>
         </Form.Group>
         <Form.Group controlId="formGroupStartingLocation">
           <Form.Label as="legend" column sm={2}>
@@ -33,13 +38,13 @@ export default function Create() {
           </Col>
         </Form.Group>
         <Form.Group controlId="formGroupInnerPort">
-          <Form.Control type="number" placeholder="Enter inner port score" />
+          <Form.Control type="number" placeholder="Enter inner port score" required/>
         </Form.Group>
         <Form.Group controlId="formGroupOuterPort">
-          <Form.Control type="number" placeholder="Enter outer port score" />
+          <Form.Control type="number" placeholder="Enter outer port score" required/>
         </Form.Group>
         <Form.Group controlId="formGroupLowerPort">
-          <Form.Control type="number" placeholder="Enter lower port score" />
+          <Form.Control type="number" placeholder="Enter lower port score" required/>
         </Form.Group>
         <Form.Group controlId="formGroupControlPanelStageTwo">
           <Form.Label as="legend" column sm={2}>
@@ -64,7 +69,7 @@ export default function Create() {
         </Form.Group>
         <Form.Group as={Row}>
           <Col sm={{ span: 10, offset: 2 }}>
-            <Button type="submit">Create Recording</Button>
+            <Button type="submit" onclick={submitForm()}>Create Recording</Button>
           </Col>
         </Form.Group>
       </Form>
