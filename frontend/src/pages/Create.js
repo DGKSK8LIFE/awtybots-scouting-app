@@ -4,9 +4,17 @@ import NavBar from "../components/navbar";
 import axios from "axios";
 
 formState = {
+  team: null,
   startingLocation: null,
-  
-}
+  moved: null,
+  innerPort: null,
+  outerPort: null,
+  lowerPort: null,
+  controlPanelStageTwo: null,
+  controlPanelStageThree: null,
+  hangTime: null,
+  time: null
+};
 
 const submitForm = () => {
   axios.post("localhost:8080/create-recording", {});
