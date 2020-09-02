@@ -10,6 +10,7 @@ export default function Card(props) {
         <ul>
           <li>ID: {props.obj.id}</li>
           <li>Team: {props.obs.team}
+          <li>Starting Location: {props.obs.startingLocation}</li>
           <li>Moved?: {props.obj.moved}</li>
           <li>Inner Port Shots: {props.obj.innerPort}</li>
           <li>Outer Port Shots: {props.obj.outerPort}</li>
