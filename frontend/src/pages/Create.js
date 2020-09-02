@@ -3,7 +3,9 @@ import { Form, Col, Row, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import axios from "axios";
 
-const submitForm = () => {};
+const submitForm = () => {
+  axios.post("localhost:8080/create-recording", {});
+};
 
 export default function Create() {
   return (
@@ -57,7 +59,9 @@ export default function Create() {
               required
             />
           </Form.Group>
-          <Form.Group> controlId="formGroupControlPanelStageTwo">
+          <Form.Group>
+            {" "}
+            controlId="formGroupControlPanelStageTwo">
             <Form.Label as="legend" column sm={2}>
               Control Panel Stage Two?
             </Form.Label>
