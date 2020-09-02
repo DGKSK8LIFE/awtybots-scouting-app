@@ -3,6 +3,11 @@ import { Form, Col, Row, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import axios from "axios";
 
+formState = {
+  startingLocation: null,
+  
+}
+
 const submitForm = () => {
   axios.post("localhost:8080/create-recording", {});
 };

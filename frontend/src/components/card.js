@@ -9,7 +9,7 @@ export default function Card(props) {
       <Card.Body>
         <ul>
           <li>ID: {props.obj.id}</li>
-          <li>Starting Location: {props.obj.startingLocation}</li>
+          <li>Team: {props.obs.team}
           <li>Moved?: {props.obj.moved}</li>
           <li>Inner Port Shots: {props.obj.innerPort}</li>
           <li>Outer Port Shots: {props.obj.outerPort}</li>
