@@ -29,14 +29,19 @@ export default function Create() {
         <br></br>
         <Form>
           <Form.Group controlId="formGroupTeam">
-            <Form.Control type="number" placeholder="Enter team" required value={formState.team} />
+            <Form.Control
+              type="number"
+              placeholder="Enter team"
+              required
+              value={formState.team}
+            />
           </Form.Group>
           <Form.Group controlId="formGroupStartingLocation">
             <Form.Label as="legend" column sm={2}>
               Starting Location
             </Form.Label>
             <Col sm={10} value={formState.startingLocation}>
-              <Form.Check label="left"/>
+              <Form.Check label="left" />
               <Form.Check label="center" />
               <Form.Check label="right" />
             </Col>
@@ -93,7 +98,11 @@ export default function Create() {
             </Col>
           </Form.Group>
           <Form.Group controlId="formGroupHangtime">
-            <Form.Control type="number" placeholder="Enter hangtime" value={formState.hangTime} />
+            <Form.Control
+              type="number"
+              placeholder="Enter hangtime"
+              value={formState.hangTime}
+            />
           </Form.Group>
           <Form.Group as={Row}>
             <Col sm={{ span: 10, offset: 2 }}>
