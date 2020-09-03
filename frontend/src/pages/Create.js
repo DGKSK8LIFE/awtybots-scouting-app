@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Col, Row, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import axios from "axios";
+import '../assets/create.css';
 
 const formState = {
   team: null,
