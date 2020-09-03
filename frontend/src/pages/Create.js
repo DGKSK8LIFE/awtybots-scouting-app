@@ -3,7 +3,7 @@ import { Form, Col, Row, Button } from "react-bootstrap";
 import NavBar from "../components/navbar";
 import axios from "axios";
 
-formState = {
+const formState = {
   team: null,
   startingLocation: null,
   moved: null,
@@ -29,13 +29,13 @@ export default function Create() {
         <br></br>
         <Form>
           <Form.Group controlId="formGroupTeam">
-            <Form.Control type="number" placeholder="Enter team" required value={formState.team} />
+            <Form.Control type="number" placeholder="Enter team" required value={this.formState.team} />
           </Form.Group>
           <Form.Group controlId="formGroupStartingLocation">
             <Form.Label as="legend" column sm={2}>
               Starting Location
             </Form.Label>
-            <Col sm={10} value={formState.startingLocation}>
+            <Col sm={10} value={this.formState.startingLocation}>
               <Form.Check label="left"/>
               <Form.Check label="center" />
               <Form.Check label="right" />
@@ -45,7 +45,7 @@ export default function Create() {
             <Form.Label as="legend" column sm={2}>
               Moved?
             </Form.Label>
-            <Col sm={10} value={formState.moved}>
+            <Col sm={10} value={this.formState.moved}>
               <Form.Check label="yes" />
               <Form.Check label="no" />
             </Col>
@@ -55,7 +55,7 @@ export default function Create() {
               type="number"
               placeholder="Enter inner port score"
               required
-              value={formState.innerPort}
+              value={this.formState.innerPort}
             />
           </Form.Group>
           <Form.Group controlId="formGroupOuterPort">
@@ -63,7 +63,7 @@ export default function Create() {
               type="number"
               placeholder="Enter outer port score"
               required
-              value={formState.outerPort}
+              value={this.formState.outerPort}
             />
           </Form.Group>
           <Form.Group controlId="formGroupLowerPort">
@@ -71,14 +71,14 @@ export default function Create() {
               type="number"
               placeholder="Enter lower port score"
               required
-              value={formState.lowerPort}
+              value={this.formState.lowerPort}
             />
           </Form.Group>
           <Form.Group controlId="formGroupControlPanelStageTwo">
             <Form.Label as="legend" column sm={2}>
               Control Panel Stage Two?
             </Form.Label>
-            <Col sm={10} value={formState.controlPanelStageTwo}>
+            <Col sm={10} value={this.formState.controlPanelStageTwo}>
               <Form.Check label="yes" />
               <Form.Check label="no" />
             </Col>
@@ -87,13 +87,13 @@ export default function Create() {
             <Form.Label as="legend" column sm={2}>
               Control Panel Stage Three
             </Form.Label>
-            <Col sm={10} value={formState.controlPanelStageThree}>
+            <Col sm={10} value={this.formState.controlPanelStageThree}>
               <Form.Check label="yes" />
               <Form.Check label="no" />
             </Col>
           </Form.Group>
           <Form.Group controlId="formGroupHangtime">
-            <Form.Control type="number" placeholder="Enter hangtime" value={formState.hangTime} />
+            <Form.Control type="number" placeholder="Enter hangtime" value={this.formState.hangTime} />
           </Form.Group>
           <Form.Group as={Row}>
             <Col sm={{ span: 10, offset: 2 }}>
