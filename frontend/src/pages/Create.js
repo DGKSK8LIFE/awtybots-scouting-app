@@ -59,7 +59,7 @@ export default function Create() {
           <Form.Group controlId="formGroupInnerPort">
             <Form.Control
               type="number"
-              placeholder="Enter inner port score"
+              placeholder="Number of balls shot into the inner port"
               required
               value={formState.innerPort}
             />
@@ -67,7 +67,7 @@ export default function Create() {
           <Form.Group controlId="formGroupOuterPort">
             <Form.Control
               type="number"
-              placeholder="Enter outer port score"
+              placeholder="Number of balls shot into the outer port"
               required
               value={formState.outerPort}
             />
@@ -75,7 +75,7 @@ export default function Create() {
           <Form.Group controlId="formGroupLowerPort">
             <Form.Control
               type="number"
-              placeholder="Enter lower port score"
+              placeholder="Number of balls shot into the lower port"
               required
               value={formState.lowerPort}
             />
