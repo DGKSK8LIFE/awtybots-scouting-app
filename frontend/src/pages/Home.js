@@ -4,7 +4,7 @@ import NavBar from "../components/navbar";
 import axios from 'axios';
 
 const queryApiThenMarshall = () => {
-  return axios.get('localhost:8080/read-recordings')
+  return axios.get('localhost:8080/api/read-recordings')
 }
 
 function Home() {

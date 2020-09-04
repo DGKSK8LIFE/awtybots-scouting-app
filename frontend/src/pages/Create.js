@@ -17,7 +17,7 @@ const formState = {
 };
 
 const submitForm = () => {
-  axios.post("localhost:8080/create-recording", { formState });
+  axios.post("localhost:8080/api/create-recording", { formState });
 };
 
 export default function Create() {
@@ -107,7 +107,7 @@ export default function Create() {
           </Form.Group>
           <Form.Group as={Row}>
             <Col sm={{ span: 10, offset: 2 }}>
-              <Button type="submit" onclick={submitForm()} variant="outline-dark">
+              <Button type="submit" onclick={submitForm()} variant="dark">
                 Create Recording
               </Button>
             </Col>
