@@ -18,7 +18,8 @@ Scouting PWA for First's **FINEST**, 5829.
 - Axios
 - React-Bootstrap
 - CSS
-- Chart.JS/Grafana (eventual/potential)
+- Algolia
+
 
 ### Backend
 
