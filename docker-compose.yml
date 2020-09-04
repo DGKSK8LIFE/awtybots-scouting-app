@@ -29,6 +29,7 @@ services:
       - fullstack
     depends_on:
       - mysql-container
+    container_name: go
 
   mysql-container:
     image: mysql
