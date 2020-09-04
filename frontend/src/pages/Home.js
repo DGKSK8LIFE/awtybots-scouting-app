@@ -3,9 +3,9 @@ import NavBar from "../components/navbar";
 // import Card from '../components/card';
 import axios from 'axios';
 
-// const queryApiThenMarshall = () => {
-//   const data = axios.get('localhost:8080/read-recordings')
-// }
+const queryApiThenMarshall = () => {
+  return axios.get('localhost:8080/read-recordings')
+}
 
 function Home() {
   return (
