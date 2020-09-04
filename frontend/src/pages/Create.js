@@ -107,7 +107,7 @@ export default function Create() {
           </Form.Group>
           <Form.Group as={Row}>
             <Col sm={{ span: 10, offset: 2 }}>
-              <Button type="submit" onclick={submitForm()}>
+              <Button type="submit" onclick={submitForm()} variant="outline-dark">
                 Create Recording
               </Button>
             </Col>
