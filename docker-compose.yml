@@ -52,3 +52,4 @@ volumes:
 networks:
   fullstack:
     driver: bridge
+    external: true

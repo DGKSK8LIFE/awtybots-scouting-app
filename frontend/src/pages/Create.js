@@ -17,7 +17,7 @@ const formState = {
 };
 
 const submitForm = () => {
-  axios.post("go/api/create-recording", { formState });
+  axios.post("localhost:8080/api/create-recording", { formState });
 };
 
 export default function Create() {
