@@ -14,7 +14,7 @@ func init() {
 
 func main() {
 	r := gin.Default()
-	r.GET("/api/read-recordings", handler.ReadRecordings)
-	r.POST("/api/create-recording", handler.CreateRecording)
+	r.GET("/api/read", handler.ReadRecordings)
+	r.POST("/api/create", handler.CreateRecording)
 	r.Run()
 }
