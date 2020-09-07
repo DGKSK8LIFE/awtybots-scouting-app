@@ -18,6 +18,7 @@ const formState = {
 
 const submitForm = () => {
   axios.post("http://localhost:8080/api/create", { formState });
+  console.log(formState);
 };
 
 export default function Create() {
